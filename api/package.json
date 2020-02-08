@@ -1,0 +1,27 @@
+{
+   "name": "react-banking-api",
+   "version": "1.0.0",
+   "private": true,
+   "scripts": {
+      "start": "node -r dotenv/config app.js",
+      "start-dev": "nodemon -r dotenv/config app.js",
+      "debug": "nodemon --inspect app.js"
+   },
+   "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5",
+      "debug": "^4.1.1",
+      "express": "^4.17.1",
+      "express-validator": "^6.2.0",
+      "faker": "^4.1.0",
+      "mongodb": "^3.3.3",
+      "mongoose": "^5.7.7",
+      "nodemailer": "^6.3.1",
+      "validator": "^12.0.0"
+   },
+   "devDependencies": {
+      "dotenv": "^8.2.0",
+      "nodemon": "^1.19.4"
+   }
+}
