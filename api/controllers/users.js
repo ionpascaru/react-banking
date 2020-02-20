@@ -8,6 +8,8 @@ const {
   handleValidationErrors
 } = require("../util/errors");
 
+const { checkUpdatesValid, applyUpdates } = require("../util/updates");
+
 //GET myself
 
 exports.getMyself = async (req, res, next) => {
@@ -19,4 +21,16 @@ exports.getMyself = async (req, res, next) => {
   }
 };
 
-//TODO UPDATE
+//update myself
+
+exports.updateMyself = async (req, res, next) => {
+  try {
+    const updates = ["password", "email", "phone"];
+    checkUpdatesValid(req, updates);
+    applyUpdates(req, req.user);
+    await req.user.save();
+    res.status(201).json({ message: "User has been updated" });
+  } catch (err) {
+    passError(err, next);
+  }
+};
