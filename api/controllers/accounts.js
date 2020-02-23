@@ -1,8 +1,12 @@
 const Account = require("../models/account");
 
 //TODO ERROR AND UPDATE
-
-const { throwError, passError, handleValidationErrors } = require('../util/errors')
+const {
+  throwError,
+  passError,
+  handleValidationErrors
+} = require("../util/errors");
+const { checkUpdatesValid, applyUpdates } = require("../util/updates");
 
 //GET my accounts
 exports.getMyAccounts = async (req, res, next) => {

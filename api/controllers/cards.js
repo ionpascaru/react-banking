@@ -7,6 +7,8 @@ const {
   handleValidationErrors
 } = require("../util/errors");
 
+const { checkUpdatesValid, applyUpdates } = require("../util/updates");
+
 //GET my cards
 
 exports.getMyCards = async (req, res, next) => {
