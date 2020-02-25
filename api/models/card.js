@@ -4,12 +4,12 @@ const cardSchema = new mongoose.Schema(
   {
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User"
     },
     accountId: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "Account"
     },
     isActive: {
@@ -18,38 +18,38 @@ const cardSchema = new mongoose.Schema(
     },
     number: {
       type: Number,
-      required: true
+      required: false
     },
     pin: {
       type: Number,
-      required: true
+      required: false
     },
     expiresMonth: {
       type: Number,
-      required: true
+      required: false
     },
     expiresYear: {
       type: Number,
-      required: true
+      required: false
     },
     dailyOnlineLimit: {
       type: Number,
-      required: true,
+      required: false,
       default: 2000
     },
     dailyWithdrawalLimit: {
       type: Number,
-      required: true,
+      required: false,
       default: 2000
     },
     monthlyOnlineLimit: {
       type: Number,
-      required: true,
+      required: false,
       default: 10000
     },
     monthlyWithdrawalLimit: {
       type: Number,
-      required: true,
+      required: false,
       default: 10000
     }
   },

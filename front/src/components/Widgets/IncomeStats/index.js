@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getStats } from "api/stats";
 
 import Loader from "components/UI/Loader";
-import IncomeChart from "../Charts/IncomeChart";
+// import IncomeChart from "../Charts/IncomeChart";
 
 class IncomeStats extends Component {
   state = {
@@ -26,16 +26,16 @@ class IncomeStats extends Component {
     } else {
       return (
         <section className="module stats-widget">
-          <h3>Income change stats (30 days)</h3>
-          <p>
+          <h3>You need to start saving</h3>
+          {/* <p>
             <strong>{this.state.accDetails.type} account</strong>
             {" / "}
             {this.state.accDetails.currency.toUpperCase()}
             {" / "}
             {this.state.accDetails.number}
-          </p>
+          </p> */}
 
-          <IncomeChart data={this.state.chartData} />
+          {/* <IncomeChart data={this.state.chartData} /> */}
         </section>
       );
     }

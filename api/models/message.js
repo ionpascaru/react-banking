@@ -4,21 +4,21 @@ const messageSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true
+      required: false
     },
     sentDate: {
       type: Date,
-      required: true
+      required: false
     },
     recipient: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User"
     },
     content: {
       type: String,
       trim: true,
-      required: true,
+      required: false,
       minlength: 10
     },
     isRead: {

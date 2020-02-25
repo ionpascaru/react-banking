@@ -4,11 +4,11 @@ const accountSchema = new mongoose.Schema(
   {
     type: {
       type: String,
-      required: true
+      required: false
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User"
     },
     isActive: {
@@ -17,23 +17,23 @@ const accountSchema = new mongoose.Schema(
     },
     sortcode: {
       type: Number,
-      required: true,
+      required: false,
       minlength: 6,
       maxlength: 6
     },
     number: {
       type: Number,
-      required: true,
+      required: false,
       minlength: 8,
       maxlength: 8
     },
     currency: {
       type: String,
-      required: true
+      required: false
     },
     balance: {
       type: Number,
-      required: true
+      required: false
     }
   },
   {

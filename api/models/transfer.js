@@ -4,44 +4,44 @@ const transferSchema = new mongoose.Schema(
   {
     type: {
       type: String,
-      required: true
+      required: false
     },
     payeeName: {
       type: String,
-      required: true
+      required: false
     },
     date: {
       type: Date,
-      required: true
+      required: false
     },
     amount: {
       type: Number,
-      required: true
+      required: false
     },
     status: {
       type: String,
-      required: true
+      required: false
     },
     reference: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
       minlength: 2,
       maxlength: 20
     },
     sourceAccountId: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "Account"
     },
     sender: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User"
     },
     recipient: {
       type: String,
-      required: true
+      required: false
       // type: mongoose.Schema.Types.ObjectId,
       // ref: 'User'
     }

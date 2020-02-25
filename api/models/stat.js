@@ -4,19 +4,19 @@ const statsSchema = new mongoose.Schema({
   accountId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Account",
-    required: true
+    required: false
   },
   date: {
     type: Date,
-    required: true
+    required: false
   },
   income: {
     type: Number,
-    required: true
+    required: false
   },
   expenses: {
     type: Number,
-    required: true
+    required: false
   }
 });
 
