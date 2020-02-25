@@ -49,11 +49,11 @@ const userSchema = new mongoose.Schema(
       minlength: 2,
       maxlength: 20
     },
-    picture: {
-      type: String,
-      required: false,
-      minlength: 2
-    },
+    // picture: {
+    //   type: String,
+    //   required: false,
+    //   minlength: 2
+    // },
     streetAddr: {
       type: String,
       required: false,

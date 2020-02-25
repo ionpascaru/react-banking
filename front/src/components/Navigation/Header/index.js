@@ -8,7 +8,7 @@ const NavigationHeader = props => {
     <header className="navigation-header">
       <div className="user-profile-box">
         <Link to="/panel/profile">
-          <img src="https://placehold.it/60x60" alt="User profile" />
+          {/* <img src="https://placehold.it/60x60" alt="User profile" /> */}
           <span>
             {props.user.firstName} {props.user.lastName}
           </span>

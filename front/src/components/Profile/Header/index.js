@@ -32,10 +32,10 @@ const ProfileHeader = props => {
         </p>
       </div>
 
-      <img
+      {/* <img
         src="https://placehold.it/200x200"
         alt={`${firstName} ${lastName} profile`}
-      />
+      /> */}
     </header>
   );
 };

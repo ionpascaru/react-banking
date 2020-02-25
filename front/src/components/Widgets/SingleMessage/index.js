@@ -13,7 +13,7 @@ const SingleMessage = props => {
         <h3>{props.title}</h3>
 
         <div className="message-sender-info">
-          <img src="https://placehold.it/82x82" alt="Sender profile" />
+          {/* <img src="https://placehold.it/82x82" alt="Sender profile" /> */}
           <div>
             <span>{props.sender}</span>
             <strong>to {props.recipient}</strong>

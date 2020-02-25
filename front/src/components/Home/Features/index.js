@@ -6,11 +6,14 @@ import SingleButton from "components/UI/Buttons/SingleButton";
 const HomeFeatures = () => (
   <section className="home-features">
     <div className="home-image">
-      <img
+      {/* <img
         src="https://placehold.it/400x300"
         className="img-responsive"
         alt="React-bank home"
-      />
+      /> */}
+            <div className="home-cta">
+        <SingleButton text="Log in" href="/login" size="lg" />
+      </div>
     </div>
 
     <section className="home-text">
@@ -24,9 +27,9 @@ const HomeFeatures = () => (
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sequi.
       </p>
 
-      <div className="home-cta">
-        <SingleButton text="Click here to log in" href="/login" size="lg" />
-      </div>
+      {/* <div className="home-cta">
+        <SingleButton text="Log in" href="/login" size="lg" />
+      </div> */}
     </section>
   </section>
 );

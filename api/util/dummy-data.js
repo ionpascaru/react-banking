@@ -24,7 +24,7 @@ const defaultUserData = {
   lastName: faker.name.lastName(),
   dateOfBirth: faker.date.between("1960-01-01", "2000-12-31"),
   phone: faker.phone.phoneNumberFormat(1),
-  picture: faker.internet.avatar(),
+  // picture: faker.internet.avatar(),
   streetAddr: faker.address.streetAddress(),
   postcode: faker.address.zipCode(),
   city: faker.address.city()
