@@ -1,7 +1,7 @@
 const express = require("express");
 
 // Controllers
-const accountsCtrl = require("@controllers/accounts");
+const accountsCtrl = require("../controllers/accounts");
 
 // App
 const router = express.Router();

@@ -1,5 +1,5 @@
 {
-   "name": "react-banking-api",
+   "name": "react-bank-api",
    "version": "1.0.0",
    "private": true,
    "scripts": {
@@ -21,6 +21,7 @@
       "helmet": "^3.21.2",
       "jsonwebtoken": "^8.5.1",
       "lodash": "^4.17.15",
+      "module-alias": "^2.2.2",
       "mongodb": "^3.3.3",
       "mongoose": "^5.7.7",
       "nodemailer": "^6.3.1",
@@ -31,5 +32,14 @@
    "devDependencies": {
       "dotenv": "^8.2.0",
       "nodemon": "^1.19.4"
+   },
+   "_moduleAliases": {
+      "@config": "config",
+      "@controllers": "controllers",
+      "@middleware": "middleware",
+      "@models": "models",
+      "@routes": "routes",
+      "@util": "util",
+      "@validations": "validations"
    }
 }

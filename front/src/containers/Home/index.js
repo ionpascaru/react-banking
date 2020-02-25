@@ -22,7 +22,6 @@ class Home extends Component {
             <section className="module home">
               <Header clientsCount={this.state.clientsCount} />
               <Features />
-              <NewFeatures />
             </section>
           </div>
         </div>

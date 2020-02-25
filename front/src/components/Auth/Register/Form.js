@@ -10,30 +10,30 @@ const InnerForm = props => {
   return (
     <Form className="register-form">
       <div>
-        <div className="form-group">
-          <Field
-            type="email"
-            className="form-control login-input"
-            name="email"
-            placeholder="Your email..."
-          />
-          {touched.email && errors.email && (
-            <p className="field-invalid">{errors.email}</p>
-          )}
+        <div>
+          <div className="form-group">
+            <Field
+              type="email"
+              className="form-control login-input"
+              name="email"
+              placeholder="Your email..."
+            />
+            {touched.email && errors.email && (
+              <p className="field-invalid">{errors.email}</p>
+            )}
+          </div>
+          <div className="form-group">
+            <Field
+              type="password"
+              className="form-control password-input"
+              name="password"
+              placeholder="Your password..."
+            />
+            {touched.password && errors.password && (
+              <p className="field-invalid">{errors.password}</p>
+            )}
+          </div>
         </div>
-
-        <div className="form-group">
-          <Field
-            type="password"
-            className="form-control password-input"
-            name="password"
-            placeholder="Your password..."
-          />
-          {touched.password && errors.password && (
-            <p className="field-invalid">{errors.password}</p>
-          )}
-        </div>
-
         <p>
           <Link to="/login">Already have an account?</Link>
         </p>
@@ -49,7 +49,7 @@ const RegisterForm = withFormik({
   // Transform outer props into form values
   mapPropsToValues: props => ({ email: "", password: "" }),
 
-  // Add a custom validation 
+  // Add a custom validation function (this can be async too!)
   validationSchema: Yup.object().shape({
     email: Yup.string()
       .required("Email is required")

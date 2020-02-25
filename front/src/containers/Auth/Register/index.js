@@ -26,7 +26,11 @@ class Register extends Component {
     );
   }
 
-  onRegisterSubmit = (email, password) => {};
+  onRegisterSubmit = (email, password) => {
+    this.props
+      .register({ email, password })
+      .catch(error => this.setState({ loading: false, error }));
+  };
 }
 
 const mapDispatchToProps = dispatch => {

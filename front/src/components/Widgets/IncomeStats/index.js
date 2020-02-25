@@ -12,8 +12,6 @@ class IncomeStats extends Component {
     loaded: false
   };
 
-  // Get account stats for the last 30 days
-  // For the first user's account
   componentDidMount() {
     getStats(this.props.firstAccount._id, 30)
       .then(({ accDetails, data }) => {

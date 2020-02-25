@@ -1,6 +1,7 @@
+// Models
 const Transfer = require("../models/transfer");
 
-// Utils
+// Utilities
 const {
   throwError,
   passError,
@@ -8,7 +9,7 @@ const {
 } = require("../util/errors");
 const { checkUpdatesValid, applyUpdates } = require("../util/updates");
 
-// Get all transfers
+// Get all my transfers
 exports.getMyTransfers = async (req, res, next) => {
   try {
     let transfers = await Transfer.find({
@@ -25,7 +26,7 @@ exports.getMyTransfers = async (req, res, next) => {
   }
 };
 
-// Get one transfer
+// Get single transfer
 exports.getSingle = async (req, res, next) => {
   try {
     let transfer = await Transfer.findOne({
@@ -43,7 +44,7 @@ exports.getSingle = async (req, res, next) => {
   }
 };
 
-// Create new transfer
+// Create a new transfer
 exports.create = async (req, res, next) => {
   const transfer = new Transfer(req.body);
 

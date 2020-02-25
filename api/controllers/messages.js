@@ -1,6 +1,7 @@
+// Models
 const Message = require("../models/message");
 
-// Utils
+// Utilities
 const {
   throwError,
   passError,
@@ -8,7 +9,7 @@ const {
 } = require("../util/errors");
 const { checkUpdatesValid, applyUpdates } = require("../util/updates");
 
-// Get all msgs
+// Get all my messages
 exports.getMyMessages = async (req, res, next) => {
   try {
     let messages = await Message.find({ recipient: req.user._id }).lean();

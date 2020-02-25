@@ -10,20 +10,20 @@ const data = {
     {
       type: "",
       href: "/panel/accounts",
-      title: "<strong>Latest updates go here</strong>",
+      title: "<strong>John Doe</strong> added new image",
       subtitle: "34 minutes ago"
     },
     {
       type: "image",
       href: "",
-      title: "<strong>Important notifications</strong>",
+      title: "<strong>John Doe</strong> added new image",
       subtitle: "34 minutes ago"
     }
   ],
   messageData: {
-    title: "You have a lot of work to do",
-    sender: "TAS",
-    recipient: "Ion",
+    title: "Make logo smaller, trust me!",
+    sender: "Johny Depp, johnyd@symu.co",
+    recipient: "jakub.jurkian@example.com",
     content:
       "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, laboriosam.</p><p>Qui porro voluptatibus nisi tempore nam deleniti quo. Porro, nulla.</p>"
   }

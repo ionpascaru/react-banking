@@ -1,7 +1,8 @@
+// Models
 const Account = require("../models/account");
 const Stat = require("../models/stat");
 
-// Utils
+// Utilities
 const {
   throwError,
   passError,
@@ -9,7 +10,7 @@ const {
 } = require("../util/errors");
 const { format, parse, subDays } = require("date-fns");
 
-// Get stats
+// Get stats for specific account
 exports.getStats = async (req, res, next) => {
   const { accId, daysPast = 30 } = req.params;
 

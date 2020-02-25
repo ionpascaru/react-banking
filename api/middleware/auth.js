@@ -3,7 +3,7 @@ let jwt = require("jsonwebtoken");
 
 const User = require("../models/user");
 
-// Utils
+// Utilities
 const {
   throwError,
   passError,
@@ -25,7 +25,7 @@ const auth = async (req, res, next) => {
     const user = await User.findOne({ _id: decoded.id });
 
     if (!user) {
-      throwError("No user found or token is incorrect", 422);
+      throwError("Incorrent token", 422);
     }
 
     req.token = token;
