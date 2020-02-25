@@ -1,14 +1,17 @@
-const express = require('express')
+const express = require("express");
 
-//Controller
-const accountsCtrl = require('../controllers/accounts')
+// Controllers
+const accountsCtrl = require("@controllers/accounts");
 
-const router = express.Router()
+// App
+const router = express.Router();
 
-//GET my accounts
-router.get('/my', accountsCtrl.getMyAccounts)
+// => GET /accounts/my
+// Get my accounts list
+router.get("/my", accountsCtrl.getMyAccounts);
 
-//GET 1 of my accounts
-router.arguments('/:id', accountsCtrl.getSingle)
+// => GET /accounts/:id
+// Get single account
+router.get("/:id", accountsCtrl.getSingle);
 
-module.exports = router
+module.exports = router;

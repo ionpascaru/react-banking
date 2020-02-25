@@ -1,19 +1,18 @@
-require('module-alias/register');
-const CONFIG = require('../config/config');
+const CONFIG = require('./config/config');
 
 // Mongoose
 require('./db/mongoose');
 
 // Routes
-const authRouter = require('../routes/auth');
-const commonRouter = require('../routes/common');
-const usersRouter = require('../routes/users');
-const accountsRouter = require('../routes/accounts');
-const cardRouter = require('../routes/cards');
-const messageRouter = require('../routes/messages');
-const transferRouter = require('../routes/transfers');
-const formsRouter = require('../routes/forms');
-const statsRouter = require('../routes/stats');
+const authRouter = require('./routes/auth');
+const commonRouter = require('./routes/common');
+const usersRouter = require('./routes/users');
+const accountsRouter = require('./routes/accounts');
+const cardRouter = require('./routes/cards');
+const messageRouter = require('./routes/messages');
+const transferRouter = require('./routes/transfers');
+const formsRouter = require('./routes/forms');
+const statsRouter = require('./routes/stats');
 
 // Others
 const express = require('express');
@@ -24,12 +23,12 @@ const cors = require('cors');
 const chalk = require('chalk');
 
 // Middlewares
-const auth = require('../middleware/auth');
-const errorHandler = require('../middleware/error-handler');
-// const maintenance = require('../middleware/maintenance');
+const auth = require('./middleware/auth');
+const errorHandler = require('./middleware/error-handler');
+// const maintenance = require('./middleware/maintenance');
 
 // Utilities
-const createDummyData = require('../util/dummy-data');
+const createDummyData = require('./util/dummy-data');
 
 // App
 const app = express();

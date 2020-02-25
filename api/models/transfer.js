@@ -4,7 +4,7 @@ const transferSchema = new mongoose.Schema(
   {
     type: {
       type: String,
-      require: true
+      required: true
     },
     payeeName: {
       type: String,
@@ -42,6 +42,8 @@ const transferSchema = new mongoose.Schema(
     recipient: {
       type: String,
       required: true
+      // type: mongoose.Schema.Types.ObjectId,
+      // ref: 'User'
     }
   },
   {

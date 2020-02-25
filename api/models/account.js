@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const accountSchema = new mongoose.Schema(
   {
@@ -9,23 +9,23 @@ const accountSchema = new mongoose.Schema(
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: 'User'
+      ref: "User"
     },
     isActive: {
       type: Boolean,
       default: true
     },
-    bankBranch: {  //bank identifier 4 digits + branch identifier 4 digits
+    sortcode: {
+      type: Number,
+      required: true,
+      minlength: 6,
+      maxlength: 6
+    },
+    number: {
       type: Number,
       required: true,
       minlength: 8,
       maxlength: 8
-    },
-    number: {     //spanish bank account number is 10
-      type: Number,
-      required: true,
-      minlength:10,
-      maxlength: 10
     },
     currency: {
       type: String,
@@ -41,6 +41,6 @@ const accountSchema = new mongoose.Schema(
   }
 );
 
-const Account = mongoose.model('Account', accountSchema);
+const Account = mongoose.model("Account", accountSchema);
 
 module.exports = Account;

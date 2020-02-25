@@ -18,8 +18,8 @@ const messageSchema = new mongoose.Schema(
     content: {
       type: String,
       trim: true,
-      required: true
-      //minlength ?
+      required: true,
+      minlength: 10
     },
     isRead: {
       type: Boolean,

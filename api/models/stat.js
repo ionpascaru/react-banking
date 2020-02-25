@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const statsSchema = new mongoose.Schema({
   accountId: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "Account"
+    ref: "Account",
+    required: true
   },
   date: {
     type: Date,
