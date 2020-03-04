@@ -4,7 +4,7 @@ import { getUsersCount } from "api/common";
 import Loader from "components/UI/Loader";
 import Header from "components/Home/Header";
 import Features from "components/Home/Features";
-import NewFeatures from "components/Home/NewFeatures";
+
 
 class Home extends Component {
   state = {

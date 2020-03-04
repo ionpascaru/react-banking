@@ -9,7 +9,7 @@ import { isValidToken } from "tools";
 import Layout from "hoc/Layout";
 
 import Home from "containers/Home";
-import CurrencyStats from "containers/CurrencyStats";
+
 import Panel from "containers/Panel";
 
 import Login from "containers/Auth/Login";
@@ -36,7 +36,6 @@ class App extends Component {
       <Layout>
         <Switch>
           <Route path="/panel" component={Panel} />
-          <Route path="/currencies" component={CurrencyStats} />
           <Route path="/login" component={Login} />
           <Route path="/logout" component={Logout} />
           <Route path="/register" component={Register} />
