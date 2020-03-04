@@ -14,19 +14,17 @@ const {
   handleValidationErrors
 } = require("../util/errors");
 const { sendEmail } = require("../util/notifications/send-email");
-
+const generateData = require("../util/dummy-data");
 // Register
 exports.register = async (req, res, next) => {
-  // Password has already been hashed - in User model
   const user = new User(req.body);
 
   try {
     await user.save();
 
     if (!user) {
-      throwError("Problems creating a user", 422);
+      throwError("Problems creating user", 422);
     }
-
     // Send welcome email
     sendEmail("welcome", {
       to: user.email,

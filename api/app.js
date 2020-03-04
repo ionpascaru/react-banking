@@ -1,4 +1,3 @@
-// require("module-alias/register");
 const CONFIG = require("./config/config");
 
 // Mongoose
