@@ -15,7 +15,7 @@ const data = {
     },
     {
       type: "image",
-      href: "",
+      href: "/panel",
       title: "<strong>Check accounts from other banks</strong>",
       subtitle: ""
     }
